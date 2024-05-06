@@ -1,3 +1,111 @@
-<html>
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meine Webseite</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #1f1f1f;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #fff;
+            text-align: center;
+        }
+
+        h2 {
+            color: #fff;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        p.left {
+            text-align: left;
+        }
+
+        .email {
+            text-align: center;
+            margin-top: 20px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a {
+            color: #007bff;
+        }
+
+        .email:hover {
+            text-decoration: underline;
+        }
+
+        li {
+            margin-top: 10px;
+        }
+        .thanks-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .thanks-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
 <body>
-Test
+    <div class="container">
+        <h1>Littleyoda</h1>
+        <h2>Kontaktmöglichkeiten</h2>
+        <p>Du kannst mir über die folgende E-Mail-Adresse erreichen:</p>
+        <p class="email" id="currentdate">-- Hier sollte eine E-Mail-Adresse erscheinen, wenn du Javascript an hast --
+        </p>
+        <h2>Danke sagen</h2>
+            <p class="left">Falls euch eins meiner Projekte gefallen hat oder ich euch helfen könnte, <br/>würde ich mich über eine Art
+                Wertschätzung meiner investierten Zeit freuen.<br/>Wege gibt es viele:
+            <ul>
+                <li>Einfach eine E-Mail mit einem Danke</li>
+                <li>Eine kleine Spende z.B. via <a href="https://www.paypal.com/paypalme/littleyoda/">Paypal</a> für das nächste Eis, für die nächste Pizza, ...
+                </li>
+                <li>Eine regelmäßige Spende<br />
+                    z.B. als Dauerauftrag über ein paar Euros</li>
+                <li>Etwas von meiner Wunschliste:<a href="http://www.amazon.de/registry/wishlist/2VWXZ5RUL9ZSO"
+                        target="_blank" rel="noopener noreferrer"><br />
+                        Bei Amazon</a></li>
+            </ul>
+        </p>
+    </div>
+
+    <script>
+        // JavaScript, um das aktuelle Datum anzuzeigen
+        const currentDateElement = document.getElementById('currentdate');
+        const currentDate = new Date();
+        const currentMonth = String(currentDate.getMonth()).padStart(2, "9");
+        const currentYear = String(currentDate.getFullYear()).substring(2);
+        const r = atob("QGJ1cnNjaC5jb20=")
+        currentDateElement.textContent = ` sb_github${currentYear}${currentMonth}${r}`
+    </script>
+</body>
+
+</html>
